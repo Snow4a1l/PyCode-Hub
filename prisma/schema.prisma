@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Python学习代码模型
+model PythonCode {
+  id          String   @id @default(cuid())
+  title       String                   // 代码标题
+  description String?                  // 代码描述
+  code        String                   // 代码内容
+  category    String   @default("其他") // 分类：基础语法、数据结构、算法、项目等
+  tags        String?                  // 标签，逗号分隔
+  fileName    String?                  // 原始文件名
+  isFavorite  Boolean  @default(false) // 是否收藏
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // 关联的笔记
+  notes       Note[]
+}
+
+// 学习笔记模型
+model Note {
+  id          String   @id @default(cuid())
+  title       String                   // 笔记标题
+  content     String                   // 笔记内容（支持Markdown）
+  category    String   @default("其他") // 分类
+  tags        String?                  // 标签，逗号分隔
+  isFavorite  Boolean  @default(false) // 是否收藏
+  codeId      String?                  // 关联的代码ID（可选）
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // 关联的代码
+  code        PythonCode? @relation(fields: [codeId], references: [id], onDelete: Cascade)
+}
