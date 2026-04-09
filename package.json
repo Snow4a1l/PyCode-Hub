@@ -1,32 +1,26 @@
 {
   "name": "pycode-hub",
   "version": "1.0.0",
-  "description": "一个简洁优雅的 Python 学习代码与笔记管理平台",
+  "description": "Snow4a1l 的静态个人技术博客",
   "private": true,
-  "author": "Your Name",
+  "author": "Snow4a1l",
   "license": "MIT",
   "keywords": [
-    "python",
-    "code-manager",
-    "learning",
-    "notes",
+    "blog",
     "nextjs",
-    "prisma"
+    "static-site",
+    "python",
+    "learning-notes"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/pycode-hub.git"
+    "url": "https://github.com/Snow4a1l/PyCode-Hub.git"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "db:push": "prisma db push",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "db:reset": "prisma migrate reset",
-    "db:studio": "prisma studio"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
