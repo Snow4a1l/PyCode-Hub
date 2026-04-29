@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyCode Hub | 学习历程</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="kicker">PyCode Hub</p>
+      <h1>记录我的 Python 学习历程</h1>
+      <p class="lead">
+        这里是一个纯静态版本页面，可直接部署到 GitHub Pages。
+        我会在这里持续更新学习笔记、练习代码和阶段总结。
+      </p>
+      <a class="btn" href="https://github.com/Snow4a1l/PyCode-Hub" target="_blank" rel="noreferrer">查看仓库</a>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>学习笔记</h2>
+        <p>记录语法、概念和踩坑复盘，形成自己的知识索引。</p>
+      </article>
+      <article class="card">
+        <h2>代码练习</h2>
+        <p>保存每次练习题和小项目，方便回顾解法思路。</p>
+      </article>
+      <article class="card">
+        <h2>阶段总结</h2>
+        <p>按周或按月回顾成长轨迹，明确下一步学习方向。</p>
+      </article>
+    </section>
+
+    <section class="timeline">
+      <h2>近期计划</h2>
+      <ul>
+        <li>整理基础语法专题：函数、递归、列表推导式</li>
+        <li>补齐数据分析专题：NumPy / Pandas / Matplotlib</li>
+        <li>完善一个可展示的课程项目 Demo</li>
+      </ul>
+    </section>
+
+    <footer>
+      <small id="year"></small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = `${new Date().getFullYear()} PyCode Hub`;
+  </script>
+</body>
+</html>
